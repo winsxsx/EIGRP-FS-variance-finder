@@ -12,7 +12,7 @@ RD=int(input("\nВведите параметр метрики ReportedDistance 
 if RD<FD:
     print("\n\nМаршрут через маршрутизатор R2 соответствует условиям резервного.")
     yesno=input("\n\nПроизвести расчёт оптимального значения множителя variance (yes\\no)?\n")
-    if yesno=="yes":
+    if yesno.lower()=="yes":
 #Считаем минимально допустимое значение variance:
         distance_rez=int(input("\n\nВведите текущий параметр метрики резервного маршрута\n"))
         variance=1
@@ -30,7 +30,7 @@ if RD<FD:
             if distance_rez>var:
                 continue
 
-    elif yesno=="no":
+    elif yesno.lower()=="no":
         print("\nРаcчёт множителя отменён.")
 
     else:
